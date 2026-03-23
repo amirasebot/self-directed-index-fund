@@ -28,7 +28,7 @@ Streamlit dashboard
 ## Project Structure
 
 ```text
-custom-index/
+self-directed-index-fund/
 ├── app.py
 ├── main.py
 ├── portfolio.csv
@@ -43,10 +43,11 @@ custom-index/
 
 ## Setup
 
-Create and activate the virtual environment if needed:
+Clone the repo and create the virtual environment:
 
 ```bash
-cd /Users/amiribrahim/workspace/github/custom-index
+git clone git@github.com:amirasebot/self-directed-index-fund.git
+cd self-directed-index-fund
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -57,7 +58,7 @@ pip install -r requirements.txt
 Use this when you want to regenerate `portfolio.csv` from the latest available data.
 
 ```bash
-cd /Users/amiribrahim/workspace/github/custom-index
+cd self-directed-index-fund
 .venv/bin/python main.py
 ```
 
@@ -80,16 +81,16 @@ Symbol  Security  ...  company_weight  weight
 ...
 ```
 
-After it finishes, the refreshed portfolio will be saved at:
+After it finishes, the refreshed portfolio will be saved to:
 
-`/Users/amiribrahim/workspace/github/custom-index/portfolio.csv`
+`portfolio.csv`
 
 ## Start the Dashboard Server
 
 Run the Streamlit app:
 
 ```bash
-cd /Users/amiribrahim/workspace/github/custom-index
+cd self-directed-index-fund
 .venv/bin/streamlit run app.py
 ```
 
@@ -133,6 +134,5 @@ Use this page to:
 ## Notes
 
 - `portfolio.csv` is the base dataset used by the dashboard
-- dashboard inputs are persisted locally in `config/ui_state.json`
+- dashboard inputs persist for the current browser tab via URL query parameters
 - some Yahoo Finance tickers, especially dot-class symbols, may occasionally return incomplete data
-
