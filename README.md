@@ -1,10 +1,10 @@
 # Create Self Directed Index Fund
 
-Build a self-directed index from the S&P 500, refresh the underlying portfolio data, and explore the result in a Streamlit dashboard with dynamic filters and backtests.
+Build a self-directed index from the Major Index universe, refresh the underlying portfolio data, and explore the result in a Streamlit dashboard with dynamic filters and backtests.
 
 ## What This Project Does
 
-- pulls the S&P 500 universe
+- pulls the Major Index universe
 - enriches each symbol with market cap and historical performance
 - computes portfolio weights
 - splits company weight across multiple share classes when needed
@@ -14,7 +14,7 @@ Build a self-directed index from the S&P 500, refresh the underlying portfolio d
 ## Project Flow
 
 ```text
-S&P 500 source
+Major Index source
     ↓
 main.py
     ↓
@@ -65,7 +65,7 @@ cd self-directed-index-fund
 What this does:
 
 ```text
-Fetch S&P 500
+Fetch Major Index
     ↓
 Pull market cap + returns
     ↓
@@ -106,7 +106,7 @@ http://localhost:8501
 
 Use this page to:
 
-- start from the full S&P 500
+- start from the full Major Index universe
 - filter by sector
 - filter by sub-industry
 - add include filters one at a time

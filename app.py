@@ -373,7 +373,7 @@ def render_overview(df: pd.DataFrame) -> None:
             <div class="eyebrow">Portfolio Dashboard</div>
             <h1>Create Self Directed Index Fund</h1>
             <p>
-                Start from the full S&amp;P 500, apply your own filters, and the dashboard
+                Start from the full Major Index universe, apply your own filters, and the dashboard
                 recalculates weights dynamically. Multi-class companies are split evenly
                 across their share classes after company-level weight is computed.
             </p>
@@ -391,7 +391,7 @@ def render_overview(df: pd.DataFrame) -> None:
 
     col1, col2, col3, col4 = st.columns(4)
     metrics = [
-        ("S&P Constituents", f"{len(view_df):,}"),
+        ("Major Index Constituents", f"{len(view_df):,}"),
         ("Unique Companies", f"{view_df['company_name'].nunique():,}"),
         ("Covered Sectors", f"{view_df['GICS Sector'].nunique():,}"),
         ("Total Weight", f"{view_df['weight_pct'].sum():.2f}%"),
@@ -453,7 +453,7 @@ def render_overview(df: pd.DataFrame) -> None:
             horizontal=True,
         )
 
-    st.subheader("Filtered S&P 500 Portfolio")
+    st.subheader("Filtered Major Index Portfolio")
     st.dataframe(
         view_df[
             [
@@ -503,7 +503,7 @@ def render_allocation(df: pd.DataFrame) -> None:
             <div class="eyebrow">Capital Planner</div>
             <h1>Backtest Self Directed Index Fund</h1>
             <p>
-                Backtest the currently filtered S&amp;P 500 strategy with a lump sum,
+                Backtest the currently filtered Major Index strategy with a lump sum,
                 optional recurring contributions, and dynamic weights recalculated after filtering.
             </p>
         </div>
@@ -536,7 +536,7 @@ def render_allocation(df: pd.DataFrame) -> None:
 
     col1, col2, col3, col4 = st.columns(4)
     metrics = [
-        ("S&P Constituents", f"{len(allocatable_display):,}"),
+        ("Major Index Constituents", f"{len(allocatable_display):,}"),
         ("Contributed", f"${selected_total['Total Contributed ($)']:,.2f}"),
         ("Backtest Value", f"${selected_total['Portfolio Value ($)']:,.2f}"),
         ("Backtest Return", f"{selected_total['Portfolio Return (%)']:.2f}%"),
