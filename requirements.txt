@@ -1,0 +1,8 @@
+pandas
+numpy
+yfinance
+openai
+alpaca-py
+pyyaml
+lxml
+streamlit

@@ -1,0 +1,14 @@
+{
+  "page": "Allocation Dashboard",
+  "apply_default_screen": false,
+  "selected_sectors": [],
+  "selected_industries": [],
+  "include_filters": [],
+  "exclude_filters": [],
+  "top_holdings": 5,
+  "allocation_top_n": 5,
+  "initial_investment": 0.0,
+  "recurring_amount": 0.0,
+  "recurring_frequency": "Monthly",
+  "selected_period": "perf_1y"
+}
